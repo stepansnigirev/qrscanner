@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./static/styles.css">
   <script type="text/javascript" src="./static/bcur/urlib.min.js"></script>
+  <style type="text/css">
+    main{
+      max-width: 800px;
+      margin: auto;
+      width: 100%;
+    }
+    textarea{
+      margin: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -368,15 +378,18 @@ class QRScannerElement extends HTMLElement {
 customElements.define('qr-scanner', QRScannerElement);
 </script>
 <main>
-  <qr-scanner id="myscanner" open>
+  <br><br><br>
+  <qr-scanner id="myscanner">
     <button class="btn" slot="button">Scan me!</button>
   </qr-scanner>
+  <textarea id="result"></textarea>
 </main>
 
 <script type="text/javascript">
   document.getElementById("myscanner").addEventListener('scan', (e)=>{
     console.log(e.detail.result);
     console.log(`"${e.detail.result}"`);
+    document.getElementById('result').innerText = e.detail.result;
   });
 </script>
 </body>
