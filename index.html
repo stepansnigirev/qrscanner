@@ -100,7 +100,7 @@
       border: 1px solid var(--cmap-border-darker);
       flex-grow: 1;
       flex-basis: 0;
-      max-width: 170px;
+      max-width: 100%;
       padding: 10px 20px;
       margin-left: -1px;
     }
@@ -122,6 +122,13 @@
     }
     #cam-list{
       margin: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+    @media (max-width: 800px){
+      #cam-list {
+        flex-direction: column;
+      }
     }
   </style>
   <div class="popup" id="popup">
