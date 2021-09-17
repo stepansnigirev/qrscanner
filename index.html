@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>QR scanner demo</title>
-	<link rel="stylesheet" type="text/css" href="/static/styles.css">
-	<script type="text/javascript" src="/static/bcur/urlib.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./static/styles.css">
+	<script type="text/javascript" src="./static/bcur/urlib.min.js"></script>
 </head>
 <body>
 
@@ -96,8 +96,8 @@
 </template>
 
 <script type="module">
-import QrScanner from "/static/qr/qr-scanner.min.js";
-QrScanner.WORKER_PATH = "/static/qr/qr-scanner-worker.min.js";
+import QrScanner from "./static/qr/qr-scanner.min.js";
+QrScanner.WORKER_PATH = "./static/qr/qr-scanner-worker.min.js";
 
 class QRScannerElement extends HTMLElement {
   constructor() {
