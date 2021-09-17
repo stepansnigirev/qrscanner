@@ -350,6 +350,7 @@ class QRScannerElement extends HTMLElement {
       cameras.forEach((camera, i) => {
         const radio = document.createElement('input');
         radio.type = "radio";
+        radio.name = "cam-select";
         radio.id = `cam${i}`;
         radio.value = camera.id;
         radio.addEventListener('change', e=>{
