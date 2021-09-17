@@ -98,11 +98,15 @@
       cursor: pointer;
       background: var(--cmap-bg);
       border: 1px solid var(--cmap-border-darker);
+      display: flex;
       flex-grow: 1;
       flex-basis: 0;
       max-width: 100%;
       padding: 10px 20px;
       margin-left: -1px;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
     }
     .radio:hover,
     input[type="radio"]:checked+.radio{
@@ -128,6 +132,12 @@
     @media (max-width: 800px){
       #cam-list {
         flex-direction: column;
+      }
+      .radio:nth-child(2){
+        border-radius: 10px 10px 0 0;
+      }
+      .radio:last-child{
+        border-radius: 0 0 10px 10px;
       }
     }
   </style>
